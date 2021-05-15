@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light" *ngIf="showHeader()">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="">Stefacoin</a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item" *ngIf="usuario?.tipo === 1">
+          <a class="nav-link active" aria-current="page" href="/listar-professor">Professores</a>
+        </li>
+        <li class="nav-item" *ngIf="usuario?.tipo === 1">
+          <a class="nav-link active" aria-current="page" href="/listar-aluno">Alunos</a>
+        </li>
+        <li class="nav-item" *ngIf="usuario?.tipo === 1">
+          <a class="nav-link active" aria-current="page" href="/curso">Cursos</a>
+        </li>
+        <li class="nav-item" *ngIf="usuario?.tipo === 1">
+          <a class="nav-link active" aria-current="page" (click)="logout()" href="">Logout</a>
+        </li>
+        <li class="nav-item" *ngIf="usuario?.tipo === 2">
+          <a class="nav-link" href="#">Area do Aluno</a>
+        </li>
+        <li class="nav-item" *ngIf="usuario?.tipo === 2">
+          <a class="nav-link active" aria-current="page" href="/curso">Cursos</a>
+        </li>
+        <li class="nav-item" *ngIf="usuario?.tipo === 2">
+          <a class="nav-link active" aria-current="page" (click)="logout()" href="">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

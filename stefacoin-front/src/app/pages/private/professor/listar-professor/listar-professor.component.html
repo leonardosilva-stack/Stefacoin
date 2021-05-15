@@ -1,0 +1,16 @@
+<table class="table  table-bordered border-primary">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Excluir</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let prof of professor">
+            <th scope="row">{{prof.id}}</th>
+            <td>{{prof.nome}}</td>
+            <td><button type="button" class="btn btn-danger" (click)="exluirItem(prof.id)">Excluir</button></td>
+        </tr>
+    </tbody>
+</table>

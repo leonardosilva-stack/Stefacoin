@@ -1,0 +1,14 @@
+<table class="table  table-bordered border-primary">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nome</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of aluno">
+            <th scope="row">{{user.id}}</th>
+            <td>{{user.nome}}</td>
+        </tr>
+    </tbody>
+</table>

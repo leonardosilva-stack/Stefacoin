@@ -1,0 +1,46 @@
+<div class="center">
+    <h2>STEFACOIN</h2>
+    <div class="box">
+        <form [formGroup]="cadastroForm" (ngSubmit)="cadastrado()">
+            <div class="mb-1">
+                <label for="tx-nome"></label>
+                <input type="text" formControlName="nome" class="form-control" id="tx-nome" placeholder="Nome">
+            </div>
+            <div class="mb-1">
+                <label for="tx-idade"></label>
+                <input type="number" formControlName="idade" class="form-control" id="tx-idade" placeholder="Idade">
+            </div>
+            <div class="mb-1">
+                <label for="tx-email"></label>
+                <input type="email" formControlName="email" class="form-control" id="tx-email" placeholder="Email">
+            </div>
+            <div class="mb-4">
+                <label for="tx-senha"></label>
+                <input type="password" formControlName="senha" class="form-control" id="tx-senha" placeholder="Password">
+            </div>
+            <select class="custom-select mr-sm-1" id="tx-senha" *ngIf="tipo ===  2" formControlName="formacao">
+                <option value="1">Analise de Sistemas</option>
+                <option value="2">Engenharia da Computação</option>
+                <option value="3">Ciência da Computação</option>
+                <option value="4">Superior Incompleto </option>
+            </select>
+
+            <div class="form-check">
+                <input class="form-check-input"  (change)="changeTipoTemplate(2)" formControlName="tipo" [value] = "true" [(ngModel)]="value" value="2" type="radio" name="tipo" id="tipo2" >
+                <label class="form-check-label"  for="tipo2">
+                    Aluno
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input"  (change)="changeTipoTemplate(1)"  formControlName="tipo" [value] = "false" [(ngModel)]="value" value="1" type="radio" name="tipo" id="tipo1">
+                <label class="form-check-label" for="tipo1">
+                    Professor
+                </label>
+            </div>
+            <div>
+                <button type="submit" class="btn btn-primary">Register</button>
+                <a href="/" class="btn btn-outline-primary">Voltar</a>
+            </div>
+        </form>
+    </div>
+</div>

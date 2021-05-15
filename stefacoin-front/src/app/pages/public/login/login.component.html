@@ -1,0 +1,19 @@
+
+<div class="center">
+  <h2>STEFACOIN</h2>
+  <div class="box">
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
+      <div class="mb-1">
+        <label for="tx-email" class="form-label"></label>
+        <input type="email" formControlName="email" class="form-control" id="tx-email" placeholder="email@domain.com" />
+      </div>
+      <div class="mb-3">
+        <label for="pwd-senha" class="form-label"></label>
+        <input type="password" formControlName="senha" class="form-control" id="pwd-senha" placeholder="Senha" />
+      </div>
+      <button type="submit" class="btn btn-primary mr-5">Login</button>
+      <a href="/nova-conta" class="btn btn-outline-primary">Criar Conta</a>
+    </form>
+  </div>
+</div>
+
